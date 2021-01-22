@@ -1,10 +1,19 @@
 package com.bridglabz.mmodanalyzer;
+public class MoodAnalyzer
+{
+    String message;
+    MoodAnalyzer(String message){
+        this.message = message;
+    }
 
-public class MoodAnalyzer {
-    public String analyseMood(String message) {
-        if (message.contains("sad"))
-            return "SAD";
-        else
+    public String analyseMood() {
+        try {
+            if (message.contains("sad"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch (NullPointerException nullPointerException) {
             return "HAPPY";
+        }
     }
 }
